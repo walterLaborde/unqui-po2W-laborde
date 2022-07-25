@@ -72,7 +72,7 @@ public class CounterTestCase {
 
 	
 /**
-* Verifica la cantidad de multiplos
+* Verifica el numero con mayor cantidad de digitos pares
 */
 
 
@@ -91,5 +91,44 @@ public class CounterTestCase {
 		assertEquals(mostEvenNum, 539412668);
 	}
 
+/**
+* Verifica el maximo comun multiplo de dos numeros
+*/
+
+	@Test
+	public void testGetHighestMultipleOf() {
+	// declaring ints 
+		int int1 = 3;
+		int int2 = 9;
+	// Getting the highest common multiple of int1 and int2
+		int commonMultipleOf = counter.getHighestMultipleOf(int1,int2);
+	// I check the amount is the expected one
+		assertEquals(commonMultipleOf, 999);
+	}
+	
+	
+/**
+* Verifica el maximo comun multiplo de dos numeros
+*/
+
+	@Test
+	public void testStringsOperations() {
+	// i declare some variables
+		String a = "abc";
+		String s = a;
+		String t;
+	// I check the amount is the expected one
+		assertEquals(s.length(), 3);
+		//assertEquals(t.length(), null);
+		assertEquals(1 + a, "1abc");
+		assertEquals(a.toUpperCase(), "ABC");
+		assertEquals("Libertad".indexOf("r"), 4);
+		assertEquals("Quilmes".substring(2,4), "il");
+		assertEquals((counter.a.length() + counter.a).startsWith("a"), false);
+		assertEquals(counter.s == counter.a, true);
+		assertEquals(counter.a.substring(1,3).equals("bc"), true);
+		
+	}
+	
 
 }

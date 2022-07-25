@@ -81,4 +81,39 @@ public class Counter {
 		return i%2==0;
 	}
 	
+	// returns the highest 
+	int getHighestMultipleOf(int x, int y) {
+		int commonMult = 1000;
+		int highestMult = this.getTheHighestMult(commonMult);
+		while((commonMult > 0) 
+				&& 
+			!((commonMult%x == 0) && (commonMult%y == 0))) { 
+			commonMult--; 
+		}
+		return highestMult;
+	}
+	
+	private int getTheHighestMult(int i) {
+		if(i == 0) {
+			return -1;
+		}
+		else {
+			return i;
+		}
+	}
+	
+	// esta mal... siempre estoy devolviendo -1... tengo que corregir
+
+	// -------------------------------------------------------
+	
+	
+	// Ejercicio 4 - Examinar las expresiones
+	
+	String a = "abc";
+	String s = a;
+	String t;
+
+
 }
+
+
