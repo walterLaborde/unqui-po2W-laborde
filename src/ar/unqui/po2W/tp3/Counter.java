@@ -50,4 +50,35 @@ public class Counter {
 		}
 		return multipleCount;
 	}
+	
+	// returns the number with the most of even digits from an int array
+	int getMostEvenDigitsNumber(ArrayList<Integer> l) {
+		int mostEvenDigits = 0;
+		//ArrayList<Integer> ls = l;
+		for(int i = 0; i<l.size(); i++) {
+			if(this.getMostEvenDigits(l.get(i)) > this.getMostEvenDigits(mostEvenDigits)) {
+				mostEvenDigits = l.get(i);
+			}
+		}
+		return mostEvenDigits;
+	}
+
+	// gets the amount of even digits of a given number
+	private int getMostEvenDigits(int i) {
+		int evenDigitsAmount = 0;
+		int intDivision = i;
+		while(intDivision>0) {
+			if(this.isEven(intDivision%10)) {
+				evenDigitsAmount++;
+			}
+			intDivision = intDivision/10;
+		}
+		return evenDigitsAmount;
+	}
+	
+	// indicates if a given number is even
+	private boolean isEven(int i) {
+		return i%2==0;
+	}
+	
 }
