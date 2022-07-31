@@ -47,7 +47,7 @@ class PointTestCase {
 	@Test
 	void testAddPointTo() {
 		// new Point without parameters returns (0,0) coordinates
-		pointWithParameters1.addPointTo(pointWithParameters2);
+		pointWithParameters1.addPointTo(pointWithParameters2.getX(),pointWithParameters2.getY());
 		assertEquals(pointWithParameters1.getX(), -2);
 		assertEquals(pointWithParameters1.getY(), 6);
 	}
