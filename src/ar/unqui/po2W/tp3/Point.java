@@ -43,9 +43,9 @@ public class Point {
 	}
 	
 	// returns the result of adding point p1 to point p2 
-	public void addPointTo(Point p2) {
-		float newX = this.getX() + p2.getX();
-		float newY = this.getY() + p2.getY();
+	public void addPointTo(float dx, float dy) {
+		float newX = this.getX() + dx;
+		float newY = this.getY() + dy;
 		this.setX(newX);
 		this.setY(newY);
 	}
