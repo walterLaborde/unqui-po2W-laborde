@@ -7,6 +7,7 @@ public class Person {
 
 	//the name of the person
 	private String name;
+	private String surname;
 	// the date of birth
 	LocalDate DOB = null;
 	
@@ -16,6 +17,15 @@ public class Person {
 		this.setName(name);
 		this.setDOB(dOB);
 	}
+	
+	
+	// constructor using fields for 11. teamWork
+	public Person(String name, String surname, LocalDate dOB) {
+		super();
+		this.setName(name);
+		this.setSurname(surname);
+		this.setDOB(dOB);
+	}
 
 	//Getters and Setters
 	public String getName() {
@@ -23,6 +33,15 @@ public class Person {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getSurname() {
+		return surname;
+	}
+
+
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 	
 	public LocalDate getDOB() {

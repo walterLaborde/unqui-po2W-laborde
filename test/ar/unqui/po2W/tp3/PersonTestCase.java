@@ -26,6 +26,13 @@ class PersonTestCase {
 	}
 	
 	@Test
+	void testGetName() {
+		assertEquals(person1.getName(),"Waldo");
+		assertEquals(person2.getName(),"Silvi");
+	}
+	
+	
+	@Test
 	void testGetAge() {
 		assertEquals(person1.getAge(),46);
 		assertEquals(person2.getAge(),36);
