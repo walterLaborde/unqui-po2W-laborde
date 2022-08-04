@@ -17,28 +17,28 @@ public class TeamWork {
 	}
 
 	// Getters and Setters
-	public String getName() {
+	private String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 
-	public List<Person> getTeamMembers() {
+	private List<Person> getTeamMembers() {
 		return teamMembers;
 	}
 
-	public void setTeamMembers(ArrayList<Person> teamMembers) {
+	private void setTeamMembers(ArrayList<Person> teamMembers) {
 		this.teamMembers = teamMembers;
 	}
 	
-	public void addMember(Person p) {
+	private void addMember(Person p) {
 		this.getTeamMembers().add(p);
 	}
 	
 	// calculates the average age of all members
-	public Double averageAgeTeamMembers() {
+	Double averageAgeTeamMembers() {
 		Double averageAge = this.getTeamMembers()
 				.stream()
 				.collect(Collectors.averagingInt(tm -> tm.getAge()));
