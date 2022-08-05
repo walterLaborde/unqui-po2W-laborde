@@ -47,9 +47,10 @@ class TeamWorkTestCase {
 		tm.add(p4);
 		tm.add(p5);
 		
-		teamWork = new TeamWork("LClan", tm);
-	}
+		teamWork = new TeamWork().setNameTeamMembers("LClan", tm);
 	
+	}
+		
 	@Test
 	//Test the amount of members in the list
 	void testTeamMembersSize() {

@@ -10,18 +10,17 @@ public class TeamWork {
 	List<Person> teamMembers = new ArrayList<Person>();
 	
 	//constructor
-	public TeamWork(String teamWorkName, ArrayList<Person> teamMembers) {
+	public TeamWork() {
 		super();
-		// this method avoids giving outside objects access to structure (instance variables)
-		// thats why i use this method.
-		this.setNameTeamMembers(teamWorkName,teamMembers);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	// this is the method used as the Creation Parameter Method
 	// its name begins with "set" followed by the name of the instance variables in camelCase
-	private void setNameTeamMembers(String teamWorkName, ArrayList<Person> teamMembers) {
+	public TeamWork setNameTeamMembers(String teamWorkName, ArrayList<Person> teamMembers) {
 		this.setName(teamWorkName);
 		this.setTeamMembers(teamMembers);
+		return this;
 	}
 
 	// Getters and Setters
