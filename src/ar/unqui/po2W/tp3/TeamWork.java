@@ -10,9 +10,16 @@ public class TeamWork {
 	List<Person> teamMembers = new ArrayList<Person>();
 	
 	//constructor
-	public TeamWork(String name, ArrayList<Person> teamMembers) {
+	public TeamWork(String teamWorkName, ArrayList<Person> teamMembers) {
 		super();
-		this.setName(name);
+		// this method avoids giving outside objects access to structure (instance variables)
+		// thats why i use this method.
+		this.setTeamWork(teamWorkName,teamMembers);
+	}
+	
+	// this is the method used as the Creation Parameter Method
+	private void setTeamWork(String teamWorkName, ArrayList<Person> teamMembers) {
+		this.setName(teamWorkName);
 		this.setTeamMembers(teamMembers);
 	}
 
@@ -35,6 +42,14 @@ public class TeamWork {
 	
 	private void addMember(Person p) {
 		this.getTeamMembers().add(p);
+	}
+	
+	// Public Visibility Methods
+	
+	// returns the name of the teamWork
+	// i use this instead of giving access to getters
+	String name() {
+		return this.getName();
 	}
 	
 	// calculates the average age of all members

@@ -57,6 +57,12 @@ class TeamWorkTestCase {
 	}
 	
 	@Test
+	//test if the name of the teamwork is correct
+	void testTeamWorkName() {
+		assertEquals(teamWork.name(),"LClan");
+	}
+	
+	@Test
 	//Test the average age of team members
 	void testAverageAgeTeamMembers() {
 		assertEquals(teamWork.averageAgeTeamMembers(),54.8);
