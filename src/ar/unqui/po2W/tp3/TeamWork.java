@@ -14,11 +14,12 @@ public class TeamWork {
 		super();
 		// this method avoids giving outside objects access to structure (instance variables)
 		// thats why i use this method.
-		this.setTeamWork(teamWorkName,teamMembers);
+		this.setNameTeamMembers(teamWorkName,teamMembers);
 	}
 	
 	// this is the method used as the Creation Parameter Method
-	private void setTeamWork(String teamWorkName, ArrayList<Person> teamMembers) {
+	// its name begins with "set" followed by the name of the instance variables in camelCase
+	private void setNameTeamMembers(String teamWorkName, ArrayList<Person> teamMembers) {
 		this.setName(teamWorkName);
 		this.setTeamMembers(teamMembers);
 	}
