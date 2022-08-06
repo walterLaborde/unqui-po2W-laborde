@@ -52,9 +52,9 @@ class TeamWorkTestCase {
 	}
 		
 	@Test
-	//Test the amount of members in the list
+	//Test the amount of members in the collection
 	void testTeamMembersSize() {
-		assertEquals(tm.size(),5);
+		assertEquals(teamWork.teamMembersAmount(),5);
 	}
 	
 	@Test
@@ -66,7 +66,7 @@ class TeamWorkTestCase {
 	@Test
 	//Test the average age of team members
 	void testAverageAgeTeamMembers() {
-		assertEquals(teamWork.averageAgeTeamMembers(),54.8);
+		assertEquals(teamWork.teamMembersAverageAge(),54.8);
 	}
 	
 

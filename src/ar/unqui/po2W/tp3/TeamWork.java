@@ -40,7 +40,11 @@ public class TeamWork {
 		this.teamMembers = teamMembers;
 	}
 	
-	private void addMember(Person p) {
+	// In this case only "this" access to the variable, even so, i implement the message 
+    // manually and it's private also.
+    // the naming is <<collectionDelegationAction>>+<<collectionNameSingular>>
+    //           add+teamMember
+	private void addTeamMember(Person p) {
 		this.getTeamMembers().add(p);
 	}
 	
@@ -52,11 +56,14 @@ public class TeamWork {
 		return this.getName();
 	}
 	
+	//returns the size of teamMembers collection
+	int teamMembersAmount() {
+		return this.getTeamMembers().size();
+	}
+	
 	// calculates the average age of all members
-	Double averageAgeTeamMembers() {
-		Double averageAge = this.getTeamMembers()
-				.stream()
-				.collect(Collectors.averagingInt(tm -> tm.getAge()));
+	Double teamMembersAverageAge() {
+		Double averageAge = this.getTeamMembers().stream().collect(Collectors.averagingInt(tm -> tm.getAge()));
 	    return averageAge;
 	}
 	
