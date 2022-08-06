@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 
 public class TeamWork {
 
-	String name;
-	List<Person> teamMembers = new ArrayList<Person>();
+	private String name;
+	private List<Person> teamMembers = new ArrayList<Person>();
 	
 	//constructor
 	public TeamWork() {
