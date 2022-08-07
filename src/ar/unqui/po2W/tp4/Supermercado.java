@@ -1,7 +1,6 @@
 package ar.unqui.po2W.tp4;
 
 import java.util.ArrayList;
-import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,15 +10,10 @@ public class Supermercado {
 	private String direccion;
 	private List<Producto> productos = new ArrayList<Producto>();
 	
-	public Supermercado() {
-		super();
-	}
-	
-	// Creation Parameter Method
-	public Supermercado setSupermercado(String nombre, String direccion) {
+	//constructor
+	public Supermercado(String nombre, String direccion) {
 		this.setNombre(nombre);
 		this.setDireccion(direccion);
-		return this;
 	}
 
 	//private Getters and Setters
@@ -43,9 +37,6 @@ public class Supermercado {
 		return productos;
 	}
 
-	private void setProductos(List<Producto> productos) {
-		this.productos = productos;
-	}
 	
 	//public methods
 
