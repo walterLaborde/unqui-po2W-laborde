@@ -1,5 +1,6 @@
 package ar.unqui.po2W.tp5;
 
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 public class CajaTestCase {
