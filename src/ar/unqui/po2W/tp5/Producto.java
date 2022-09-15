@@ -20,7 +20,7 @@ public abstract class Producto {
 		this.precioBase = precioBase;
 	}
 
-	private int getCantEnStock() {
+	public int getCantEnStock() {
 		return cantEnStock;
 	}
 
