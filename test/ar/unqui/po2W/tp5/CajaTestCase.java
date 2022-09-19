@@ -44,7 +44,6 @@ public class CajaTestCase {
 		caja.registrarProducto(prod1);
 		caja.registrarProducto(prod2);
 		caja.registrarProducto(prod3);
-		List<Producto> productosRegistrados = Arrays.asList(prod1,prod2,prod3); //{prod1,prod2,prod3};
-		assertEquals(caja.productosEnCaja(),{prod1,prod2,prod3});
+		assertEquals(caja.productosEnCaja().size(),3);
 	}
 }
