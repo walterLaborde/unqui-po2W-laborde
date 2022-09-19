@@ -11,7 +11,7 @@ class CooperativaTestCase {
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-		prodCoop1 = new Cooperativa(100,4,20);
+		prodCoop1 = new Cooperativa(100,1,20);
 	}
 	
 	@Test
@@ -19,5 +19,12 @@ class CooperativaTestCase {
 		assertEquals(prodCoop1.precio(),80);
 	}
 	
+	@Test
+	void testActualizarStock() {
+		prodCoop1.actualizarStock();
+		assertEquals(prodCoop1.stockActual(),0);
+		prodCoop1.actualizarStock(); // ya estoy en cero antes de mandar este mensaje
+		assertEquals(prodCoop1.stockActual(),0);
+	}
 
 }
