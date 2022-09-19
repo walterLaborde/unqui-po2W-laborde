@@ -34,7 +34,12 @@ public abstract class Producto {
 	}
 	
 	public void actualizarStock() {
-		this.cantEnStock -= 1;
+		if (this.getCantEnStock() > 0) {
+			this.cantEnStock -= 1;
+		}
+		else {
+			this.cantEnStock = 0;
+		}
 	}
 	
 	public int stockActual() {
