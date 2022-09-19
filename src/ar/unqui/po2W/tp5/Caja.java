@@ -26,4 +26,8 @@ public class Caja {
 	public double montoTotal() {
 		return this.getProductos().stream().collect(Collectors.summingDouble(p -> p.precio()));
 	}
+	
+	public List<Producto> productosEnCaja() {
+		return this.getProductos();
+	}
 }

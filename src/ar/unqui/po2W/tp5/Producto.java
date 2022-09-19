@@ -20,7 +20,7 @@ public abstract class Producto {
 		this.precioBase = precioBase;
 	}
 
-	public int getCantEnStock() {
+	private int getCantEnStock() {
 		return cantEnStock;
 	}
 
@@ -35,6 +35,10 @@ public abstract class Producto {
 	
 	public void actualizarStock() {
 		this.cantEnStock -= 1;
+	}
+	
+	public int stockActual() {
+		return this.getCantEnStock();
 	}
 	
 }

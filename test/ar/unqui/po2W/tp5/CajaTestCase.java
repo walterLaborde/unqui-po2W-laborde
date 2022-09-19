@@ -1,7 +1,13 @@
 package ar.unqui.po2W.tp5;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Assertions;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
 
 public class CajaTestCase {
 
@@ -19,9 +25,26 @@ public class CajaTestCase {
 	}
 	
 	@Test
-	void testRegistrarProducto() {
+	public void testRegistrarProducto() {
 		caja.registrarProducto(prod1);
-		//assertEquals(prod1.getCantEnStock(),3);
-		//assertEquals(caja)
+		assertEquals(prod1.stockActual(),3);
+		assertTrue(caja.productosEnCaja().contains(prod1));
+	}
+	
+	@Test
+	public void testMontoTotal() {
+		caja.registrarProducto(prod1);
+		caja.registrarProducto(prod2);
+		caja.registrarProducto(prod3);
+		assertEquals(caja.montoTotal(),233.00);
+	}
+	
+	@Test
+	public void testProductosEnCaja() {
+		caja.registrarProducto(prod1);
+		caja.registrarProducto(prod2);
+		caja.registrarProducto(prod3);
+		List<Producto> productosRegistrados = Arrays.asList(prod1,prod2,prod3); //{prod1,prod2,prod3};
+		assertEquals(caja.productosEnCaja(),{prod1,prod2,prod3});
 	}
 }
