@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class ClienteEMail {
 	
-	 IServidor servidor;
-	 String nombreUsuario;
-	 String passusuario;
-	 ArrayList<Correo> inbox;
+	private IServidor servidor;
+	private String nombreUsuario;
+	private String passusuario;
+	private ArrayList<Correo> inbox;
 	private ArrayList<Correo> borrados;
 	
 	public ClienteEMail(IServidor servidor, String nombreUsuario, String pass){
