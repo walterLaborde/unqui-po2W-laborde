@@ -11,12 +11,12 @@ public class ClienteEMail {
 	private ArrayList<Correo> borrados;
 	
 	public ClienteEMail(IServidor servidor, String nombreUsuario, String pass){
-		this.servidor=servidor;
+		//this.servidor=servidor;
 		this.nombreUsuario=nombreUsuario;
 		this.passusuario=pass;
 		this.inbox = new ArrayList<Correo>();
 		this.borrados = new ArrayList<Correo>();
-		this.conectar();
+		//this.conectar();
 	}
 	
 	public void conectar(){
