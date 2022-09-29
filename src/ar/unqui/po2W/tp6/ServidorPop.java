@@ -21,24 +21,4 @@ public class ServidorPop implements IServidor {
 	public void enviar(Correo correo) {
       //realiza lo necesario para enviar el correo.		
 	}
-
-	@Override
-	public float tazaDeTransferencia() {
-		//no corresponde
-		return 0;
-	}
-
-	@Override
-	public void resetear() {
-         //no corresponde		
-	}
-
-	@Override
-	public void realizarBackUp() {
-		//no corresponde
-		
-	}
-
-
-
 }
