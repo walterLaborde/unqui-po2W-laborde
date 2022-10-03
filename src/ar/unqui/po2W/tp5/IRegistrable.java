@@ -2,5 +2,5 @@ package ar.unqui.po2W.tp5;
 
 public interface IRegistrable {
 
-	public abstract void registrar();
+	public abstract double registrar();
 }
