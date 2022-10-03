@@ -5,8 +5,6 @@ public class Servicio implements IFactura{
 	private double costoPorUnidad;
 	private int unidadesConsumidas;
 	
-	
-	
 	public Servicio(double costoPorUnidad, int unidadesConsumidas) {
 		super();
 		this.setCostoPorUnidad(costoPorUnidad);
@@ -30,16 +28,13 @@ public class Servicio implements IFactura{
 	}
 
 	@Override
-	public void registrar() {
-		
-		// TODO Auto-generated method stub
-		
+	public double registrar() {
+		return this.getCostoPorUnidad() * this.getUnidadesConsumidas();
 	}
 
 	@Override
 	public void registrarPago(IFactura factura) {
-		// TODO Auto-generated method stub
-		
+		this.registrar();
 	}
 	
 	
