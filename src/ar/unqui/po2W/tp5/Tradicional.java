@@ -7,10 +7,8 @@ public class Tradicional extends Producto {
 	}
 
 	@Override
-	public void registrar() {
-		// TODO Auto-generated method stub
-		
+	public double registrar() {
+		return this.precio();
 	}
 
-	
 }

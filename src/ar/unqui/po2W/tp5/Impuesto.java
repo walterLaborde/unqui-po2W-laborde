@@ -1,19 +1,31 @@
 package ar.unqui.po2W.tp5;
 
-public class Impuesto implements IFactura {
+public class Impuesto extends Factura {
 
 	private double tasaDeServicio;
-	
+
+	public Impuesto(IAgencia miAgencia, double tasaDeServicio) {
+		super(miAgencia);
+		this.setTasaDeServicio(tasaDeServicio);
+	}
+
+	private double getTasaDeServicio() {
+		return tasaDeServicio;
+	}
+
+	private void setTasaDeServicio(double tasaDeServicio) {
+		this.tasaDeServicio = tasaDeServicio;
+	}
+
+
 	@Override
-	public void registrar() {
-		// TODO Auto-generated method stub
-		
+	public double registrar() {
+		return this.getTasaDeServicio();
 	}
 
 	@Override
-	public void registrarPago(IFactura factura) {
-		// TODO Auto-generated method stub
-		
+	public void registrarPago(Impuesto this) {
+		this.registrarPago();
 	}
 
 	

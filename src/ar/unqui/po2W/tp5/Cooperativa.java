@@ -17,13 +17,14 @@ public class Cooperativa extends Producto {
 		this.porcentajeDeDescuento = descuento;
 	}
 	
+	@Override
 	public double precio() {
 		return super.precio() - (super.precio() * (this.getPorcentajeDeDescuentoo() / 100));
 	}
 
 	@Override
-	public void registrar() {
-		// TODO Auto-generated method stub
+	public double registrar() {
+		return this.precio();
 		
 	}
 }

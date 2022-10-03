@@ -1,12 +1,13 @@
 package ar.unqui.po2W.tp5;
 
-public class Servicio implements IFactura{
+public class Servicio extends Factura{
 
 	private double costoPorUnidad;
 	private int unidadesConsumidas;
 	
-	public Servicio(double costoPorUnidad, int unidadesConsumidas) {
-		super();
+	
+	public Servicio(IAgencia miAgencia, double costoPorUnidad, int unidadesConsumidas) {
+		super(miAgencia);
 		this.setCostoPorUnidad(costoPorUnidad);
 		this.setUnidadesConsumidas(unidadesConsumidas);
 	}
@@ -33,8 +34,8 @@ public class Servicio implements IFactura{
 	}
 
 	@Override
-	public void registrarPago(IFactura factura) {
-		this.registrar();
+	public void registrarPago(Servicio this) {
+		this.registrarPago();
 	}
 	
 	
