@@ -18,15 +18,17 @@ public class Caja {
 		return registrables;
 	}	
 	
+	
 	public void registrarRegistrable(IRegistrable r) {
-		r.registrar();
+		r.actualizarStock();
+		this.getRegistrables().add(r);
 		
 	}
 	
 	public double montoTotal() {
 		return this.getRegistrables().stream().collect(Collectors.summingDouble(r -> r.registrar()));
 		// return this.getRegistrables().stream().collect(Collectors.summingDouble(r -> r.precio()));
-		// TODO esto ya no sirve... tengo que directamente ofrecer el precio en el metodo
+		// esto ya no sirve... tengo que directamente ofrecer el precio en el metodo
 		// registrar... porque registrables ya no 
 	}
 
