@@ -24,13 +24,10 @@ public class Caja {
 	}
 	
 	public double montoTotal() {
+		return this.getRegistrables().stream().collect(Collectors.summingDouble(r -> r.registrar()));
 		// return this.getRegistrables().stream().collect(Collectors.summingDouble(r -> r.precio()));
 		// TODO esto ya no sirve... tengo que directamente ofrecer el precio en el metodo
 		// registrar... porque registrables ya no 
-	}
-	
-	public List<Producto> productosEnCaja() {
-		return this.getProductos();
 	}
 
 }
