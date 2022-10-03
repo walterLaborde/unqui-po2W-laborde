@@ -8,26 +8,29 @@ import ar.unqui.po2W.tp5.Producto;
 
 public class Caja {
 
-	List<Producto> productos = new ArrayList<Producto>();
+	List<IRegistrable> registrables = new ArrayList<IRegistrable>();
 
 	public Caja() {
 		super();
 	}
 
-	private List<Producto> getProductos() {
-		return productos;
+	private List<IRegistrable> getRegistrables() {
+		return registrables;
 	}	
 	
-	public void registrarProducto(Producto p) {
-		p.actualizarStock();
-		this.getProductos().add(p);
+	public void registrarRegistrable(IRegistrable r) {
+		r.registrar();
+		
 	}
 	
 	public double montoTotal() {
-		return this.getProductos().stream().collect(Collectors.summingDouble(p -> p.precio()));
+		// return this.getRegistrables().stream().collect(Collectors.summingDouble(r -> r.precio()));
+		// TODO esto ya no sirve... tengo que directamente ofrecer el precio en el metodo
+		// registrar... porque registrables ya no 
 	}
 	
 	public List<Producto> productosEnCaja() {
 		return this.getProductos();
 	}
+
 }

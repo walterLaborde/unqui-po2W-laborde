@@ -6,5 +6,11 @@ public class Tradicional extends Producto {
 		super(precioBase, cantEnStock);
 	}
 
+	@Override
+	public void registrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

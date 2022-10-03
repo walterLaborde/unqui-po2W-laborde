@@ -20,4 +20,10 @@ public class Cooperativa extends Producto {
 	public double precio() {
 		return super.precio() - (super.precio() * (this.getPorcentajeDeDescuentoo() / 100));
 	}
+
+	@Override
+	public void registrar() {
+		// TODO Auto-generated method stub
+		
+	}
 }
