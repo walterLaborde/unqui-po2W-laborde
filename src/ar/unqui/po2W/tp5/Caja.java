@@ -19,7 +19,7 @@ public class Caja {
 	}	
 	
 	
-	public void registrarRegistrable(IRegistrable r) {
+	public void registrarRegistrable(IRegistrable r) throws Exception {
 		r.actualizarStock();
 		this.getRegistrables().add(r);
 		

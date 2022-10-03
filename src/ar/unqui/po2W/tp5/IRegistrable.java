@@ -4,5 +4,5 @@ public interface IRegistrable {
 
 	public abstract double registrar();
 
-	public abstract void actualizarStock();
+	public abstract void actualizarStock() throws Exception;
 }

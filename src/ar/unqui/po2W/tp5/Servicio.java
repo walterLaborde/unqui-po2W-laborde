@@ -37,6 +37,11 @@ public class Servicio extends Factura{
 	public void registrarPago(Servicio this) {
 		this.registrarPago();
 	}
+
+	@Override
+	public void actualizarStock() throws Exception {
+		//empty method
+	}
 	
 	
 

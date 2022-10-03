@@ -33,12 +33,12 @@ public abstract class Producto implements IRegistrable {
 		return this.getPrecioBase();
 	}
 	
-	public void actualizarStock() {
+	public void actualizarStock() throws Exception {
 		if (this.getCantEnStock() > 0) {
 			this.cantEnStock -= 1;
 		}
 		else {
-			this.cantEnStock = 0;
+			throw new Exception("El stock esta en cero");
 		}
 	}
 	

@@ -25,6 +25,6 @@ public class Cooperativa extends Producto {
 	@Override
 	public double registrar() {
 		return this.precio();
-		
 	}
+
 }

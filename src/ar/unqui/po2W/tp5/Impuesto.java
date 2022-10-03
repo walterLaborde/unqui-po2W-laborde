@@ -28,5 +28,10 @@ public class Impuesto extends Factura {
 		this.registrarPago();
 	}
 
+	@Override
+	public void actualizarStock() throws Exception {
+		// empty method
+	}
+
 	
 }
