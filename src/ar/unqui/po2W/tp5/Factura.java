@@ -4,9 +4,8 @@ public abstract class Factura {
 
 	private IAgencia miAgencia;
 	
-	public Factura(IAgencia miAgencia) {
+	public Factura() {
 		super();
-		this.setMiAgencia(miAgencia);
 	}
 
 	private IAgencia getMiAgencia() {
