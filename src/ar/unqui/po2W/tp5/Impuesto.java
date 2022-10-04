@@ -4,8 +4,8 @@ public class Impuesto extends Factura {
 
 	private double tasaDeServicio;
 
-	public Impuesto(IAgencia miAgencia, double tasaDeServicio) {
-		super(miAgencia);
+	public Impuesto(double tasaDeServicio) {
+		super();
 		this.setTasaDeServicio(tasaDeServicio);
 	}
 
@@ -28,10 +28,4 @@ public class Impuesto extends Factura {
 		this.registrarPago();
 	}
 
-	@Override
-	public void actualizarStock() throws Exception {
-		// empty method
-	}
-
-	
 }

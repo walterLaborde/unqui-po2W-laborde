@@ -25,4 +25,8 @@ public abstract class Factura {
 	public IAgencia miAgencia() {
 		return this.getMiAgencia();
 	}
+	
+	public void actualizarStock() throws Exception {
+		// empty method
+	}
 }
