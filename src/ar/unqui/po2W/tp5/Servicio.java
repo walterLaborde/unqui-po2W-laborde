@@ -6,8 +6,8 @@ public class Servicio extends Factura{
 	private int unidadesConsumidas;
 	
 	
-	public Servicio(IAgencia miAgencia, double costoPorUnidad, int unidadesConsumidas) {
-		super(miAgencia);
+	public Servicio(double costoPorUnidad, int unidadesConsumidas) {
+		super();
 		this.setCostoPorUnidad(costoPorUnidad);
 		this.setUnidadesConsumidas(unidadesConsumidas);
 	}
