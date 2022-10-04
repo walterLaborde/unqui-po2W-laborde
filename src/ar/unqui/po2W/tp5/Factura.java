@@ -1,6 +1,6 @@
 package ar.unqui.po2W.tp5;
 
-public abstract class Factura implements IRegistrable {
+public abstract class Factura {
 
 	private IAgencia miAgencia;
 	
