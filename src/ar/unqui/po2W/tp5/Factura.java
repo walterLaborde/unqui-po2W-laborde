@@ -16,7 +16,6 @@ public abstract class Factura {
 		this.miAgencia = miAgencia;
 	}
 
-	@Override
 	public abstract double registrar();
 	
 	public void registrarPago(Factura this) {
